@@ -1,0 +1,53 @@
+
+// 여기에 Animal 클래스와 Mammal클래스를 선언하세요.
+class Animal {
+    // 멤버 변수
+    public String name;
+    public int age;
+
+    // 생성자
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // printDetails 메서드
+    public void printDetails() {
+        System.out.println("이름 : " + name);
+        System.out.println("나이 : " + age);
+    }
+}
+
+// Mammal 클래스 (Animal 클래스 상속)
+class Mammal extends Animal {
+    // 추가 멤버 변수
+    public String furColor;
+
+    // 생성자
+    public Mammal(String name, int age, String furColor) {
+        super(name, age); // 부모 클래스의 생성자 호출
+        this.furColor = furColor;
+    }
+
+    // printDetails 메서드 오버라이딩
+
+    public void printDetails() {
+        System.out.println("이름 : " + name);
+        System.out.println("나이 : " + age);
+        System.out.println("털 색깔 : " + furColor);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Customer customer = new Customer();
+        Americano americano = new Americano();
+        CaffeLatte caffeLatte = new CaffeLatte();
+
+        customer.buyCoffee(americano);
+        customer.buyCoffee(caffeLatte);
+
+        System.out.println("💵: 현재 남은 잔액은 " + customer.money + "원 입니다.");
+    }
+}
