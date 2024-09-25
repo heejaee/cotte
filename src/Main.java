@@ -71,5 +71,7 @@ public class Main {
             sb.delete(idx, idx+key.length());
         }
         System.out.println(sb.toString());
+        System.out.println(sb.toString());
+        System.out.println(sb.toString());
     }
 }
